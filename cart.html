@@ -1,0 +1,183 @@
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Price | Your Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- Your custom style.css -->
+</head>
+<body>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo"> <!-- Link back to index.html -->
+                <i class="fas fa-shopping-bag"></i>
+                Factory <span>Price</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="products.html" id="nav-products"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="cart.html" id="nav-checkout"><i class="fas fa-credit-card"></i> Checkout</a></li>
+                          </ul>
+            <div class="header-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span> <!-- Will be updated by JS -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Navigation Tabs (Optional, can be removed if not needed on cart page) -->
+    <div class="container">
+        <div class="page-tabs">
+            <div class="page-tab" id="products-tab"><a href="products.html">Products</a></div>
+            <div class="page-tab active" id="checkout-tab">Checkout</div>
+        </div>
+    </div>
+
+    <!-- Checkout Page Content -->
+    <section id="check out-page" class="py-10" style="display: block;"> <!-- Added padding for better spacing -->
+        <div class="container">
+            <h1 class="section-title text-center mb-8">Your Shopping Cart</h1>
+            <div class="checkout-container grid grid-cols-1 md:grid-cols-2 gap-8"> <!-- Using Tailwind-like classes for layout -->
+                
+                <!-- Shipping Information Form -->
+                <div class="checkout-form bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="form-title text-2xl font-semibold mb-6">Shipping Information</h2>
+                    
+                    <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div class="form-group">
+                            <label for="first-name" class="block text-gray-700 text-sm font-bold mb-2">First Name</label>
+                            <input type="text" id="first-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name" class="block text-gray-700 text-sm font-bold mb-2">Last Name</label>
+                            <input type="text" id="last-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                        <input type="email" id="email"  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                        <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Street Address</label>
+                        <input type="text" id="address"class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    
+                    <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div class="form-group"> 
+                            <label for="city" class="block text-gray-700 text-sm font-bold mb-2">City</label>
+                            <input type="text" id="city"  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                       
+                    </div>
+                    
+                    <div class="form-group mb-6">
+                        <label for="country" class="block text-gray-700 text-sm font-bold mb-2">Country</label>
+                        <select id="country" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="Uganda">Uganda</option>
+                            <option value="United States">Kenya</option>
+                            <option value="Canada">Rwanda</option>
+                            <option value="United Kingdom">Burundi</option>
+                            <option value="Australia">Tanzania</option>
+                        </select>
+                    </div> 
+                    
+                    <!-- Payment Details (Static, as PHP doesn't process them directly yet) -->
+                    <h2 class="form-title text-2xl font-semibold mb-6">Payment Details</h2>
+                    
+                    <div class="form-group mb-4">
+                        <label for="card-name" class="block text-gray-700 text-sm font-bold mb-2">Name on Card</label>
+                        <input type="text" id="card-name" placeholder="John Doe" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                        <label for="card-number" class="block text-gray-700 text-sm font-bold mb-2">Card Number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    
+                    <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="form-group">
+                            <label for="expiry" class="block text-gray-700 text-sm font-bold mb-2">Expiry Date</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv" class="block text-gray-700 text-sm font-bold mb-2">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group flex items-center">
+                        <input type="checkbox" id="save-info" checked class="mr-2 leading-tight">
+                        <label for="save-info" class="text-sm">
+                            Save payment information for next time
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Order Summary (This content will be dynamically generated by cart.js) -->
+                <div class="order-summary bg-white p-6 rounded-lg shadow-md">
+                    <!-- Content will be inserted here by cart.js -->
+                    <h2 class="summary-title text-2xl font-semibold mb-6">Order Summary</h2>
+                    <p class="text-gray-600">Loading cart...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Factory Price</h3>
+                    <p>Your one-stop destination for quality products at affordable prices. We're committed to providing the best shopping experience.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-shipping-fast"></i> Track Order</a></li>
+                        <li><a href="#"><i class="fas fa-exchange-alt"></i> Returns & Exchanges</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> Shipping Info</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                        <li><i class="fas fa-phone"></i> +256 745699067</li>
+                        <li><i class="fas fa-envelope"></i> factoryprice@gmail.Ug</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Factory Price. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js" defer></script>
+</body>
+</html>

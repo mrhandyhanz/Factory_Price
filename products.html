@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Price| Modern E-Commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css\style.css">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                Factory <span>Price</span>
+            </a>
+            <ul class="nav-links">
+                  <li><a href="index.html" id="nav-products"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="cart.html" id="nav-checkout"><i class="fas fa-credit-card"></i> Checkout</a></li>
+                
+            </ul>
+            <div class="header-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+
+   </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Amazing Month Discounts</h1>
+            <p>Explore our reduced collection of premium items at affordable prices. Quality, style, and value all in one place.</p>
+         <!--    <a href="#" class="btn btn-primary">Shop Now</a> -->
+        </div>
+    </section>
+
+    <!-- Page Navigation Tabs -->
+    <div class="container">
+        <div class="page-tabs">
+            <div class="page-tab active" id="products-tab">Products</div>
+            <div class="page-tab" id="checkout-tab">
+			<a href="cart.html">Checkout</a>
+			</div>
+        </div>
+    </div>
+
+    <!-- Products Page -->
+    <section id="products-page">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">Featured Products</h2>
+                </div>
+            
+       <div class="products-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="product-badge">New</div>
+        <div class="product-img">
+		<img src="img\wireless.png" alt="Premium Wireless Headphones" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+		</div>
+        <div class="product-info">
+            <h3 class="product-title">Premium Wireless Headphones</h3>
+            <div class="product-price">UGX 478,000</div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span>(128)</span>
+            </div>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="product-badge">Sale</div>
+        <div class="product-img">
+		<img src="img\watch.jpg" alt="Smart Fitness Tracker watch" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+		</div>
+        <div class="product-info">
+            <h3 class="product-title">Smart Fitness Tracker Watch</h3>
+            <div class="product-price">UGX 333,000 
+               
+            </div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="far fa-star"></i>
+                <span>(92)</span>
+            </div>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="product-img">
+		<img src="img\speaker.png" alt="Bluetooth Speaker" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+		</div>
+        <div class="product-info">
+            <h3 class="product-title">Portable Bluetooth Speaker</h3>
+            <div class="product-price">UGX 222,000</div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span>(210)</span>
+            </div>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+        <div class="product-badge">Popular</div>
+        <div class="product-img">
+		<img src="img\coffee maker.jpg" alt="Coffee Maker" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+		</div>
+        <div class="product-info">
+            <h3 class="product-title">Smart Coffee Maker</h3>
+            <div class="product-price">UGX 555,000</div>
+			<span style="text-decoration: line-through; color: var(--gray); font-size: 0.9rem;">UGX 900000</span>
+            <div class="product-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span>(76)</span>
+            </div>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+        <div class="product-img">
+		<img src="img\earbuds.png" alt="Wireless Erabuds" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+		</div>
+        <div class="product-info">
+            <h3 class="product-title">True Wireless Earbuds</h3>
+            <div class="product-price">UGX 296,000</div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="far fa-star"></i>
+                <span>(142)</span>
+            </div>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+        <div class="product-badge">Sale</div>
+        <div class="product-img">
+		<img src="img\laptop.jpg" alt="Laptop" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+		</div>
+        <div class="product-info">
+            <h3 class="product-title">Ultra-Slim Laptop</h3>
+            <div class="product-price">UGX 3,330,000 
+               
+            </div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span>(58)</span>
+            </div>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+
+<!--  Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Factory Price</h3>
+                    <p>Your one-stop destination for quality products at affordable prices. We're committed to providing the best shopping experience.</p>
+                </div>
+                
+       <!--          <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-box-open"></i> Products</a></li>
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                    </ul>
+                </div> -->
+                
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-exchange-alt"></i> Returns & Exchanges</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> Shipping Info</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                        <li><i class="fas fa-phone"></i> +256 745699067</li>
+                        <li><i class="fas fa-envelope"></i> factoryprice@gmail.Ug</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy;2025 Factory Price. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script src="js\script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>

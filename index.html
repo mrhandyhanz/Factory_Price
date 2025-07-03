@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Price | Home</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN for utility classes -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Your custom style.css (ensure this path is correct) -->
+    <link rel="stylesheet" href="css/style.css"> 
+
+    <style>
+        body {
+            background-color: #ffffff; /* Ensure the main body background is white */
+        }
+        /* Custom class for red badges, using your primary color variable */
+        .product-price-badge {
+            background-color: var(--primary, #E01F26); /* Fallback to red if variable not found */
+            color: white;
+        }
+        /* Styles for the new showcase/slideshow section */
+        .showcase-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .showcase-card:hover {
+            transform: translateY(-5px);
+        }
+        .showcase-card img {
+            width: 100%;
+            height: 300px; /* Fixed height for consistency */
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+        .showcase-card:hover img {
+            transform: scale(1.05);
+        }
+        .showcase-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .showcase-overlay h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .showcase-overlay .btn {
+            background-color: var(--primary, #E01F26);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .showcase-overlay .btn:hover {
+            background-color: var(--primary-dark, #B3191F);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                Factory <span>Price</span>
+            </a>
+            <ul class="nav-links">
+                <!-- Updated link to new products page -->
+                <li><a href="products.html" id="nav-products"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="cart.html" id="nav-checkout"><i class="fas fa-credit-card"></i> Checkout</a></li>
+               
+            </ul>
+            <div class="header-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span> <!-- Will be updated by JS -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Discover Amazing Products</h1>
+            <p>Explore our curated collection of premium items at unbeatable prices. Quality, style, and value all in one place.</p>
+            <!-- Updated link to new products page -->
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- New Showcase/Slideshow Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Explore Our Collections</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Showcase Card 1 -->
+                <div class="showcase-card">
+                    <img src="img\many.jpg" alt="Electronics Collection">
+                    <div class="showcase-overlay">
+                        <h3>Electronics</h3>
+                        <p>Cutting-edge gadgets for modern living.</p>
+                        <a href="products.html" class="btn">View Collection</a>
+                    </div>
+                </div>
+
+                <!-- Showcase Card 2 -->
+                <div class="showcase-card">
+                    <img src="img\promotion.png" alt="Home & Decor Collection">
+                    <div class="showcase-overlay">
+                        <h3>Music Equipment</h3>
+                        <p>Experience full music sound.</p>
+                        <a href="products.html" class="btn">View Collection</a>
+                    </div>
+                </div>
+
+                <!-- Showcase Card 3 -->
+                <div class="showcase-card">
+                    <img src="img\bag.jpg" alt="Fashion Collection">
+                    <div class="showcase-overlay">
+                        <h3>Fashion</h3>
+                        <p>Stay trendy with our latest apparel.</p>
+                        <a href="products.html" class="btn">View Collection</a>
+                    </div>
+                </div>
+
+                <!-- Showcase Card 4 -->
+                <div class="showcase-card">
+                    <img src="img\earbuds.png" alt="Accessories Collection">
+                    <div class="showcase-overlay">
+                        <h3>Accessories</h3>
+                        <p>Complete your look with stylish add-ons.</p>
+                        <a href="products.html" class="btn">View Collection</a>
+                    </div>
+                </div>
+
+                <!-- Showcase Card 5 -->
+                <div class="showcase-card">
+                    <img src="img\coffee maker.jpg" alt="Books Collection">
+                    <div class="showcase-overlay">
+                        <h3>Home Items</h3>
+                        <p>Make your home a heaven in earth.</p>
+                        <a href="products.html" class="btn">View Collection</a>
+                    </div>
+                </div>
+
+                <!-- Showcase Card 6 -->
+                <div class="showcase-card">
+                    <img src="img\laptop.jpg" alt="Sports & Outdoors Collection">
+                    <div class="showcase-overlay">
+                        <h3>Computing</h3>
+                        <p>Gear up for the next gen IT items.</p>
+                        <a href="products.html" class="btn">View Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Factory Price</h3>
+                    <p>Your one-stop destination for quality products at affordable prices. We're committed to providing the best shopping experience.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                       
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-exchange-alt"></i> Returns & Exchanges</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> Shipping Info</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                        <li><i class="fas fa-phone"></i> +256 745699067</li>
+                        <li><a href="mailto:kambatimhan@gmail.com"><i class="fas fa-envelope"></i> factoryprice@gmail.Ug</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Factory Price. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script.js is now for products_listing.html, so it's removed from index.html -->
+    <!-- <script src="js/script.js" defer></script> -->
+</body>
+</html>
